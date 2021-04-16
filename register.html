@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="twitter:card" content=""/>
+    <meta name="twitter:site" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="https://www.hogehoge.com"/>
+    <meta property="og:image" content="https://www.hogehoge.com./hoge.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="600"/>
+    <meta property="og:image:height" content="400"/>
+    <meta property="og:type" content="website"/>
+    <link rel="shortcut icon" href="img/asra_favi.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="apple-touch-icon" href="img/asra_favi.ico"/>
+    <script type="text/javascript" src="//typesquare.com/3/tsad/script/ja/typesquare.js?5b56f8a477a4494088d822fee90393a3" charset="utf-8"></script>
+    <title>トップ - FunFun</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/register.css">
+  </head>
+  <body>
+    <!-- ファンファンのヘッダー部分 -->
+    <header class="funHead">
+      <!-- ファンファンのロゴ -->
+      <figure class="funHead__funLogo">
+        <a href="index.html"><img src="img/index/header-logo.svg" alt="ファンファン"></a>
+      </figure>
+
+      <nav class="funHead__funContorl">
+        <!-- 検索エリア -->
+        <div class="funHead__funContorl__search">
+          <form action="result.php" method="GET">
+            <input type="text" class="searchData" disabled placeholder="キーワード" name="keyword" value="">
+            <button type="submit" class="searchBtn"><img src="img/index/header-searchIcon.svg" alt="検索"></button>
+          </form>
+        </div>
+        <!-- 新規登録とログイン -->
+        <ul class="funHead__funContorl__userCon">
+          <li class="userConBtn">
+            <a href="register.html"><img src="img/index/header-registerIcon.svg"></a>
+            <span>新規登録</span>
+          </li>
+          <li class="userConBtn">
+            <img src="img/index/header-loginIcon.svg">
+            <span>ログイン</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="registerArea">
+        <div class="registerArea__registerBox">
+            <div class="registerArea__registerBox__icon">
+                <p><img src="img/register/register_icon.svg" alt="新規登録アイコン"></p>
+            </div>
+            <form action="" method="POST">
+                <div class="registerArea__registerBox__form">
+                    <h1>保護者様の情報</h1>
+                    <div class="registerForm">
+                        <div class="registerForm__input">
+                            <p class="name"><input class="userName" type="text" value="" placeholder="お名前" name="name"></p>
+                            <p class="address"><input class="userAddress" type="email"  value="" placeholder="E-mail" name="address"></p>
+                            <p class="password"><input class="userPassword" type="password"  value="" placeholder="パスワード(半角英数字6文字以上)" name="password" ></p>
+                            <p class="conPassword"><input class="userConPassword" type="password" placeholder="パスワード確認" value="" name="conPassword"></p>
+                            <p class="postalCode"><input class="zipcode" type="text" value="" placeholder="郵便番号" name="postalCode"><button class="zipcodeBtn" type="button">検索</button></p>
+                            <p class="prefAddress">
+                                <input class="prefName" placeholder="都道府県" value="" type="text" disabled="disabled" name="prefName">
+                                <input class="cityName" placeholder="市町村" value="" type="text" disabled="disabled" name="cityName">
+                            </p>
+                        </div>
+                        <div class="agreement">
+                            <label for="check" class="agreeLook"></label>
+                            <p><a href="">利用規約</a>と<a href="">プライバシーポリシー</a>に同意する</p>
+                            <input id="check" class="userAgreement" type="checkbox" name="agreement" value="0">
+                        </div>
+                    <div>
+                </div>
+                <button class="registerArea__registerBox__button" type="button">次へ</button>
+            </form>
+        </div>
+    </main>
+
+    <main class="childRegisterArea">
+        <div class="childRegisterArea__registerBox">
+            <div class="childRegisterArea__registerBox__icon">
+                <p><img src="img/register/register_icon.svg" alt="新規登録アイコン"></p>
+            </div>
+            <form action="" method="POST">
+                <div class="childRegisterArea__registerBox__form">
+                    <h1>お子さまの情報</h1>
+                    <div class="registerForm">
+                        <div class="registerForm__input">
+                            <p class="name"><input class="cName" type="text" value="" placeholder="お名前" name="name"></p>
+                            <p class="ruby"><input class="cRuby" type="text" value="" placeholder="ふりがな" name="ruby"></p>
+                            <div class="sexSelect">
+                                <p class="sexSelect__boy">
+                                    <input class="boy cSex" type="radio" name="sex" value="1" id="boy">
+                                    <label class="sexSelect__boy__label" for="boy">男の子</label>
+                                </p>
+                                <p class="sexSelect__girl">
+                                    <input class="girl cSex" type="radio" name="sex" value="2" id="girl">
+                                    <label class="sexSelect__girl__label" for="girl">女の子</label>
+                                </p>
+                            </div>
+                            <p class="date"><input class="cDate" type="date" value="" name="date"></p>
+                            <p class="notes"><textarea class="cNotes" name="notes" rows="5" placeholder="注意事項"></textarea></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="childRegisterArea__registerBox__button" type="button">次へ</button>
+            </form>
+        </div>
+    </main>
+
+    <main class="registerAll">
+        <div class="registerCon">
+            <div class="registerCon__icon">
+                <p><img src="img/register/register_icon.svg" alt="確認アイコン"></p>
+            </div>
+            <div class="registerCon__content">
+                <h1>保護者様の情報</h1>
+                <ul class="registerCon__content__text">
+                    <li class="name">お名前&nbsp;:&nbsp;<span>aaaa</span></li>
+                    <li class="id">会員ID&nbsp;:&nbsp;<span>aaaa</span></li>
+                    <li class="password">パスワード&nbsp;:&nbsp;<span>aaaa</span></li>
+                    <li class="stAddress">所在地&nbsp;:&nbsp;<span></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="childRegisterCon">
+            <div class="childRegisterCon__content">
+                <h1>お子さまの情報</h1>
+                <ul class="childRegisterCon__content__text">
+                    <li class="childName">お名前&nbsp;:&nbsp;<span>aaaa</span></li>
+                    <li class="childRuby">ふりがな&nbsp;:&nbsp;<span>aaaa</span></li>
+                    <li class="childSex">性別&nbsp;:&nbsp;<span>aaaa</span></li>
+                    <li class="childAge">生年月日&nbsp;:&nbsp;<span>aaaa</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="registerAll__button">
+          <button class="registerAll__button__confirm">修正</button>
+          <button class="registerAll__button__correction">確定</button>
+        </div>
+        <div class="registerFlex">
+          <div class="registerComplete">
+            <div class="registerComplete__content">
+              <p class="registerComplete__content__img"><img src="img/register/registerComplete.svg" alt=""></p>
+              <p class="registerComplete__content__text">会員登録完了</p>
+            </div>
+            <a href="index.html"><button class="registerComplete__button">体験を探す</button></a>
+          </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li>利用規約</li>
+        <li>よくある質問</li>
+        <li>お問い合わせ</li>
+      </ul>
+      <small>&copy; 2019 FunFun.</small>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="http://zipcloud.ibsnet.co.jp/api/search?callback=test"></script>
+    <script src="js/checkbox.js"></script>
+    <script src="js/pref_ajax.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

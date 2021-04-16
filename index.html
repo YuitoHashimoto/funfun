@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="twitter:card" content=""/>
+    <meta name="twitter:site" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="https://www.hogehoge.com"/>
+    <meta property="og:image" content="https://www.hogehoge.com./hoge.jpg"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="600"/>
+    <meta property="og:image:height" content="400"/>
+    <meta property="og:type" content="website"/>
+    <link rel="shortcut icon" href="img/asra_favi.ico" type="image/vnd.microsoft.icon"/>
+    <link rel="apple-touch-icon" href="img/asra_favi.ico"/>
+    <script type="text/javascript" src="//typesquare.com/3/tsad/script/ja/typesquare.js?5b56f8a477a4494088d822fee90393a3" charset="utf-8"></script>
+    <title>トップ - FunFun</title>
+    <link rel="stylesheet" href="css/index.css"/>
+  </head>
+  <body>
+    <!-- ファンファンのヘッダー部分 -->
+    <header class="funHead">
+      <!-- ファンファンのロゴ -->
+      <figure class="funHead__funLogo">
+        <a href="index.html"><img src="img/index/header-logo.svg" alt="ファンファン"></a>
+      </figure>
+
+      <nav class="funHead__funContorl">
+        <!-- 検索エリア -->
+        <div class="funHead__funContorl__search">
+          <form action="result.php" method="GET">
+            <input type="text" class="searchData" placeholder="キーワード" name="keyword" value="">
+            <button type="submit" class="searchBtn"><img src="img/index/header-searchIcon.svg" alt="検索"></button>
+          </form>
+        </div>
+        <!-- 新規登録とログイン -->
+        <ul class="funHead__funContorl__userCon">
+          <li class="userConBtn">
+            <a href="register.html"><img src="img/index/header-registerIcon.svg"></a>
+            <span>新規登録</span>
+          </li>
+          <li class="userConBtn">
+            <img src="img/index/header-loginIcon.svg">
+            <span>ログイン</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="funMain">
+      <!-- ファンファンのメインスライド部分 -->
+      <section class="funMain__slider">
+        <div class="funMain__slider__catch">
+          <p>子供たちに</p>
+          <p>ワクワクな体験を贈りましょう</p>
+        </div>
+        <div class="funMain__slider__line">
+        </div>
+        <div class="bgContent">
+          <p class="prev">＜</p>
+          <p class="next">＞</p>
+          <img src="img/index/mainImg-kamiori.jpg"/>
+          <img src="img/index/mainImg-mein.jpg"/>
+        </div>
+      </section>
+
+      <!-- イベントボタン -->
+      <ul class="funMain__event">
+        <li class="eventBtn">期間限定イベント</li>
+        <li class="eventBtn">期間限定イベント</li>
+        <li class="eventBtn">期間限定イベント</li>
+      </ul>
+
+      <!-- 利用方法のガイド -->
+      <section class="funMain__howtouse">
+        <h2 class="funMain__howtouse__ttl">かんたん<br>3 ステップ</h2>
+        <p class="funMain__howtouse__desc">体験レッスンの参加にはチケットが必要です。</p>
+        <p class="funMain__howtouse__desc">会員登録後、必要なチケットをご購入ください。</p>
+        <ul class="funMain__howtouse__stepArea">
+          <li class="funMain__howtouse__stepArea__useStep">
+            <p class="stepNum">1</p>
+            <img src="img/index/step-registerIcon.svg">
+            <h3 class="stepName">会員登録</h3>
+            <p class="stepDesc">まずは無料で会員登録を！</p>
+          </li>
+          <li class="funMain__howtouse__stepArea__useStep">
+            <p class="stepNum">2</p>
+            <img src="img/index/step-ticket.svg">
+            <h3 class="stepName">チケット購入</h3>
+            <p class="stepDesc">期間中体験し放題のチケットや回数券を購入します。</p>
+          </li>
+          <li class="funMain__howtouse__stepArea__useStep">
+            <p class="stepNum">3</p>
+            <img src="img/index/step-reservation.svg">
+            <h3 class="stepName">体験予約</h3>
+            <p class="stepDesc">体験したいレッスンを予約します。お得なイベントも見逃さないで！</p>
+          </li>
+        </ul>
+        <button class="funMain__howtouse__buyBtn"><img src="img/index/step-ticketBtn.svg">チケット購入はこちら！</button>
+      </section>
+
+      <!-- 体験一覧 -->
+      <section class="funMain__category">
+        <h2 class="funMain__category__ttl">体験一覧</h2>        
+        <section class="funMain__category__categoryArea">
+          <!-- カヌー -->
+          <section class="funMain__category__categoryArea__experience">
+            <img class="categoryPhoto" src="img/category/canoe.jpg" alt="カヌー体験">
+            <p class="categoryDate"><img src="img/category/dateIcon.svg"><time data-time="2019-08-03">2019年8月30日(金)</time><span class="type">アウトドア</span><span class="type">自然</span></p>
+            <h3 class="categoryTtl">大自然でカヌー体験</h3>
+            <p class="categoryDesc">大自然の中、水の音を聞きながらカヌーを体験しましょう。レクチャーを受けながら楽しく漕げます。</p>
+            <p class="categorySpace"><img src="img/category/spaceIcon.svg"><a href="#">中崎町市民グラウンド</a></p>
+          </section>
+
+          <!-- カヌー -->
+          <section class="funMain__category__categoryArea__experience">
+            <img class="categoryPhoto" src="img/category/pottery.jpg" alt="陶芸体験">
+            <p class="categoryDate"><img src="img/category/dateIcon.svg"><time data-time="2019-08-03">2019年8月30日(金)</time><span class="type">工芸</span></p>
+            <h3 class="categoryTtl">親子で陶芸体験！</h3>
+            <p class="categoryDesc">親子で楽しく自分だけの器を作れます。作ったものは郵送いたします。<span><b>※</b>材料費1000円必要</span></p>
+            <p class="categorySpace"><img src="img/category/spaceIcon.svg"><a href="#">旭区民センター</a></p>
+          </section>
+
+          <!-- カヌー -->
+          <section class="funMain__category__categoryArea__experience">
+            <img class="categoryPhoto" src="img/category/youtuber.jpg" alt="動画体験">
+            <p class="categoryDate"><img src="img/category/dateIcon.svg"><time data-time="2019-08-03">2019年8月30日(金)</time><span class="type">職業体験</span><span class="type">サイエンス</span></p>
+            <h3 class="categoryTtl">動画の制作・編集体験</h3>
+            <p class="categoryDesc">自分で動画を撮るところから編集してyoutubeに上がっていそうな動画を作ります。</p>
+            <p class="categorySpace"><img src="img/category/spaceIcon.svg"><a href="#">城東区マリヤスタジオ</a></p>
+          </section>
+          
+          <!-- カヌー -->
+          <section class="funMain__category__categoryArea__experience">
+            <img class="categoryPhoto" src="img/category/kamera.jpg" alt="カメラ体験">
+            <p class="categoryDate"><img src="img/category/dateIcon.svg"><time data-time="2019-08-03">2019年8月30日(金)</time><span class="type">職業体験</span><span class="type">自然</span></p>
+            <h3 class="categoryTtl">中崎公園でカメラマン！</h3>
+            <p class="categoryDesc">機材貸し出しできます。保護者も参加できます。思い出の1枚を撮りましょう。</p>
+            <p class="categorySpace"><img src="img/category/spaceIcon.svg"><a href="#">中崎公園</a></p>
+          </section>
+
+          <!-- カヌー -->
+          <section class="funMain__category__categoryArea__experience">
+            <img class="categoryPhoto" src="img/category/voice.jpg" alt="声優体験">
+            <p class="categoryDate"><img src="img/category/dateIcon.svg"><time data-time="2019-08-03">2019年8月30日(金)</time><span class="type">職業体験</span><span class="type">音楽</span></p>
+            <h3 class="categoryTtl">声優体験</h3>
+            <p class="categoryDesc">声優を体験してみましょう。プロの声優の方に来ていただき教えてもらえます。</p>
+            <p class="categorySpace"><img src="img/category/spaceIcon.svg"><a href="#">城東区マリヤスタジオ</a></p>
+          </section>
+
+          <!-- カヌー -->
+          <section class="funMain__category__categoryArea__experience">
+            <img class="categoryPhoto" src="img/category/color.jpg" alt="染色体験">
+            <p class="categoryDate"><img src="img/category/dateIcon.svg"><time data-time="2019-08-03">2019年8月30日(金)</time><span class="type">工芸</span></p>
+            <h3 class="categoryTtl">染物教室</h3>
+            <p class="categoryDesc">日本の伝統文化の染物を体験してみませんか？染物のハンカチを作ることができます。<span><b>※</b>材料費500円必要</span></p>
+            <p class="categorySpace"><img src="img/category/spaceIcon.svg"><a href="#">北区かわはら染物教室</a></p>
+          </section>
+
+          <!-- カヌー -->
+          <section class="funMain__category__categoryArea__experience">
+            <img class="categoryPhoto" src="img/category/yoga.jpg" alt="ヨガ体験">
+            <p class="categoryDate"><img src="img/category/dateIcon.svg"><time data-time="2019-08-03">2019年8月30日(金)</time><span class="type">スポーツ</span></p>
+            <h3 class="categoryTtl">親子で一緒にヨガ教室</h3>
+            <p class="categoryDesc">チケット一つにつき保護者の方も参加できます。
+                (一名様のみ)ヨガでリラックスしましょう。</p>
+            <p class="categorySpace"><img src="img/category/spaceIcon.svg"><a href="#">城北公園グランド</a></p>
+          </section>
+
+          <!-- カヌー -->
+          <section class="funMain__category__categoryArea__experience">
+            <img class="categoryPhoto" src="img/category/horse.jpg" alt="乗馬体験">
+            <p class="categoryDate"><img src="img/category/dateIcon.svg"><time data-time="2019-08-03">2019年8月30日(金)</time><span class="type">スポーツ</span><span class="type">自然</span></p>
+            <h3 class="categoryTtl">乗馬体験</h3>
+            <p class="categoryDesc">可愛いおウマさんに乗ってみましょうか。プロの指導員が優しく教えます。</p>
+            <p class="categorySpace"><img src="img/category/spaceIcon.svg"><a href="#">鶴見緑地公園乗馬苑</a></p>
+          </section>
+
+          <!-- カヌー -->
+          <section class="funMain__category__categoryArea__experience">
+            <img class="categoryPhoto" src="img/category/fish.jpg" alt="釣り体験">
+            <p class="categoryDate"><img src="img/category/dateIcon.svg"><time data-time="2019-08-03">2019年8月30日(金)</time><span class="type">アウトドア</span><span class="type">自然</span></p>
+            <h3 class="categoryTtl">中崎川で川釣り＆キャンプ</h3>
+            <p class="categoryDesc">釣り道具レンタル可能(レンタル料金500円)釣りの楽しさを学びましょう。</p>
+            <p class="categorySpace"><img src="img/category/spaceIcon.svg"><a href="#">中崎町市民グラウンド</a></p>
+          </section>
+        </section>
+        <button class="funMain__category__moreBtn">もっと見る</button>
+      </section>
+
+      <!-- カテゴリー検索 -->
+      <section class="funMain__categorySearch">
+        <h2 class="funMain__categorySearch__ttl">体験一覧</h2>
+        <div class="funMain__categorySearch__search">
+          <form action="result.php" method="GET">
+            <label for="date" class="searchDate">開催日</label>
+            <input id="date" type="date" class="searchDateInput" name="date" value="">
+            <input type="text" class="searchSpace" placeholder="開催場所" name="space" value="">
+            <input type="text" class="searchAge" placeholder="対象年齢" name="age" value="">
+            <input type="text" class="searchKeyword" placeholder="キーワード" name="keyword" value="">
+            <button type="submit" class="searchBtn"><img src="img/categorySearch/header-searchIconWhite.svg" alt="検索"></button>
+          </form>
+        </div>
+
+        <section class="funMain__categorySearch__searchArea">
+          <div class="control">
+            <h2 class="categoryTtl">カテゴリーから探す</h2>
+            <h2 class="mapTtl">地図から探す</h2>
+          </div>
+          <div class="funMain__categorySearch__searchArea__category">
+            <div class="funMain__categorySearch__searchArea__category__list">
+              <section class="categoryArea">
+                <img class="photo" src="img/categorySearch/sport.jpg">
+                <h3 class="name">スポーツ</h2>
+              </section>
+              <section class="categoryArea">
+                <img class="photo" src="img/categorySearch/autdoor.jpg">
+                <h3 class="name">アウトドア</h2>
+              </section>
+              <section class="categoryArea">
+                <img class="photo" src="img/categorySearch/food.jpg">
+                <h3 class="name">料理</h2>
+              </section>
+              <section class="categoryArea">
+                <img class="photo" src="img/categorySearch/naturl.jpg">
+                <h3 class="name">自然</h2>
+              </section>
+              <section class="categoryArea">
+                <img class="photo" src="img/categorySearch/senice.jpg">
+                <h3 class="name">サイエンス</h2>
+              </section>
+              <section class="categoryArea">
+                <img class="photo" src="img/categorySearch/music.jpg">
+                <h3 class="name">音楽</h2>
+              </section>
+              <section class="categoryArea">
+                <img class="photo" src="img/categorySearch/art.jpg">
+                <h3 class="name">工芸</h2>
+              </section>
+              <section class="categoryArea">
+                <img class="photo" src="img/categorySearch/work.jpg">
+                <h3 class="name">職業体験</h2>
+              </section>
+            </div>
+          </div>
+          <div class="funMain__categorySearch__searchArea__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4144.3725759953195!2d135.50146892540195!3d34.707593143529685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e69596746457%3A0x95eeaad5e6142bd2!2z5Lit5bSO55S66aeF!5e0!3m2!1sja!2sjp!4v1567563849816!5m2!1sja!2sjp" frameborder="0"></iframe>
+          </div>
+        </section>
+      </section>
+
+      <!-- チケットシステム -->
+      <section class="funMain__ticket">
+        <h2 class="funMain__ticket__ttl">チケットシステム</h2>
+        <div class="funMain__ticket__ticketArea">
+          <section class="funMain__ticket__ticketArea__ticketType">
+            <h3 class="type">定期チケット</h3>
+            <p class="desc">期間中体験し放題のお得なチケット！</p>
+            <p class="desc">一ヶ月の期間からご用意しております！</p>
+            <ul class="sType">
+              <li><img src="img/index/step-ticketBtn.svg">￥３,０００<span> / 1ヶ月</span></li>
+              <li><img src="img/index/step-ticketBtn.svg">￥５,０００<span> / 2ヶ月</span></li>
+              <li><img src="img/index/step-ticketBtn.svg">￥１６,０００<span> / 6ヶ月</span></li>
+              <li><img src="img/index/step-ticketBtn.svg">￥２１,０００<span> / 12ヶ月</span></li>
+            </ul>
+            <p class="comment">※ 全て税抜き価格での表示です。</p>
+            <p class="comment">※ 一部定期チケットでご利用できない体験があります。</p>
+          </section>
+          <section class="funMain__ticket__ticketArea__ticketType">
+            <h3 class="type">回数券</h3>
+            <p class="desc">期間中体験し放題のお得なチケット！</p>
+            <p class="desc">一ヶ月の期間からご用意しております！</p>
+            <ul class="sType">
+              <li><img src="img/index/step-ticketBtn.svg">￥５,００<span> / 1チケット</span></li>
+              <li><img src="img/index/step-ticketBtn.svg">￥１,３００<span> / 3チケット</span></li>
+              <li><img src="img/index/step-ticketBtn.svg">￥２,６００<span> / 6チケット</span></li>
+              <li><img src="img/index/step-ticketBtn.svg">￥４,８００<span> / 12チケット</span></li>
+            </ul>
+            <p class="comment">※ 全て税抜き価格での表示です。</p>
+            <p class="comment">※ 一部定期チケットでご利用できない体験があります。</p>
+          </section>
+        </div>
+        <button class="funMain__ticket__buyBtn"><img src="img/index/step-ticketBtn.svg">チケット購入はこちら</button>
+      </section>
+
+      <!-- ご利用者レビュー -->
+      <section class="funMain__userView">
+        <h2 class="funMain__userView__ttl">ご利用者レビュー<img src="img/userView/viewIcon.svg"></h2>
+        <div class="funMain__userView__userArea">
+          <section class="funMain__userView__userArea__user">
+            <p class="userPhoto"><img src="img/userView/boy.png"></p>
+            <p class="userName">勇気くん(10歳)</p>
+            <p class="userMess">ファンファンはとってもいいと思います。たくさん友達ができるし、すごく楽しいです。体験の日が待ち遠しいです。</p>
+          </section>
+          <section class="funMain__userView__userArea__user">
+            <p class="userPhoto"><img src="img/userView/girl.png"></p>
+            <p class="userName">リカちゃん(7歳)</p>
+            <p class="userMess">毎週どこかに体験に行っています。お母さんと一緒にできる体験もあるから楽しいです。ファンファン最高です。</p>
+          </section>
+          <section class="funMain__userView__userArea__user">
+            <p class="userPhoto"><img src="img/userView/girl.png"></p>
+            <p class="userName">カレンちゃん(8歳)</p>
+            <p class="userMess">学校の友達と一緒に行っています。思い出がたくさん作れて楽しいです。声優の体験は面白かったです。</p>
+          </section>
+          <section class="funMain__userView__userArea__user">
+            <p class="userPhoto"><img src="img/userView/boy.png"></p>
+            <p class="userName">リュウジくん(10歳)</p>
+            <p class="userMess">1年生の時からやっています。毎回いろんなとこに行けて楽しいです。これからも続けて行きたいです。</p>
+          </section>
+        </div>
+        <!-- <button class="funMain__userView__moreBtn">そのほかの質問はこちら</button> -->
+      </section>
+
+      <!-- よくある質問 -->
+      <section class="funMain__question">
+        <h2 class="funMain__question__ttl">よくある質問<img src="img/question/questionIcon.svg"></h2>
+        <div class="funMain__question__questionArea">
+          <p class="questionAsk">親子で参加できますか？</p>
+          <p class="questionAnswer">親子で参加できますと書かれた体験ならできます。それ以外は参加できません。</p>
+        </div>
+        <div class="funMain__question__questionArea">
+          <p class="questionAsk">兄弟で参加できますか？</p>
+          <p class="questionAnswer">どちらとも小学生なら参加可能です。また定期チケットは2枚必要になります。</p>
+        </div>
+        <div class="funMain__question__questionArea">
+          <p class="questionAsk">体験のキャンセルは可能でしょうか？</p>
+          <p class="questionAnswer">はい、サイト上の予約一覧からキャンセルできます。体験によってはキャンセル料金が発生する場合がございます。</p>
+        </div>
+        <button class="funMain__question__moreBtn">そのほかの質問はこちら</button>
+      </section>
+
+      <section class="chart">
+        <h2 class="chart__chartTtl"><img src="img/index/chartIcon.svg">チャット</h2>
+      </section>
+
+      <section class="chartWindow">
+        <h2 class="chartWindow__chartPrev">＜戻る</h2>
+        <div class="chartWindow__chartArea">
+          <p><img src="img/chart/userIconA.jpg"><span>こんにちは！</span></p>
+          <p><img src="img/chart/userIconA.jpg"><span>この度ご参加いただいてありがとうございます！</span></p>
+          <p><span class="mymess">よろしくお願いします！：）</span><img src="img/chart/userIconB.jpg"></p>
+        </div>
+        <div class="chartWindow__chartWrite">
+          <input type="text" class="userWriteData" placeholder="メッセージ入力" value="">
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li>利用規約</li>
+        <li>よくある質問</li>
+        <li>お問い合わせ</li>
+      </ul>
+      <small>&copy; 2019 FunFun.</small>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/img_switch.js"></script>
+    <script src="js/category_index.js"></script>
+    <script src="js/item_hover.js"></script>
+    <script src="js/map_index.js"></script>
+    <script src="js/chart.js"></script>
+  </body>
+</html>

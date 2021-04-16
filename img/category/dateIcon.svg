@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.182" height="19.5" viewBox="0 0 19.182 19.5">
+  <g id="カレンダーアイコン8" transform="translate(-4.175)">
+    <g id="グループ_27" data-name="グループ 27">
+      <path id="パス_36" data-name="パス 36" d="M140.715,3.42a.957.957,0,0,0,.957-.957V.957a.957.957,0,0,0-1.914,0V2.462A.957.957,0,0,0,140.715,3.42Z" transform="translate(-130.419)" fill="#707070"/>
+      <path id="パス_37" data-name="パス 37" d="M326.006,3.42a.957.957,0,0,0,.957-.957V.957a.957.957,0,0,0-1.914,0V2.462A.957.957,0,0,0,326.006,3.42Z" transform="translate(-308.653)" fill="#707070"/>
+      <path id="パス_38" data-name="パス 38" d="M20.669,35.807H19.151v1.1a1.8,1.8,0,1,1-3.6,0v-1.1H12.094v1.1a1.8,1.8,0,1,1-3.6,0v-1.1H6.863a2.688,2.688,0,0,0-2.688,2.688v12.76a2.688,2.688,0,0,0,2.688,2.688H20.669a2.688,2.688,0,0,0,2.688-2.688V38.495A2.688,2.688,0,0,0,20.669,35.807Zm1.38,15.448a1.382,1.382,0,0,1-1.38,1.38H6.863a1.382,1.382,0,0,1-1.38-1.38V40.194H22.049Z" transform="translate(0 -34.443)" fill="#707070"/>
+      <rect id="長方形_48" data-name="長方形 48" width="2.422" height="2.422" transform="translate(10.678 14.568)" fill="#707070"/>
+      <rect id="長方形_49" data-name="長方形 49" width="2.422" height="2.422" transform="translate(10.678 10.815)" fill="#707070"/>
+      <rect id="長方形_50" data-name="長方形 50" width="2.422" height="2.422" transform="translate(6.925 14.568)" fill="#707070"/>
+      <rect id="長方形_51" data-name="長方形 51" width="2.422" height="2.422" transform="translate(6.925 10.815)" fill="#707070"/>
+      <rect id="長方形_52" data-name="長方形 52" width="2.422" height="2.422" transform="translate(18.185 7.062)" fill="#707070"/>
+      <rect id="長方形_53" data-name="長方形 53" width="2.422" height="2.422" transform="translate(14.432 7.062)" fill="#707070"/>
+      <path id="パス_39" data-name="パス 39" d="M264.654,279.07l-.72-.56-1.312,1.687-.779-.623-.57.712,1.5,1.2Z" transform="translate(-247.306 -267.903)" fill="#707070"/>
+      <rect id="長方形_54" data-name="長方形 54" width="2.422" height="2.422" transform="translate(18.185 10.815)" fill="#707070"/>
+      <rect id="長方形_55" data-name="長方形 55" width="2.422" height="2.422" transform="translate(14.432 14.568)" fill="#707070"/>
+      <rect id="長方形_56" data-name="長方形 56" width="2.422" height="2.422" transform="translate(10.678 7.062)" fill="#707070"/>
+    </g>
+  </g>
+</svg>

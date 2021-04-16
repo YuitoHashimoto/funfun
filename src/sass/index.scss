@@ -1,0 +1,941 @@
+@import "ress";
+@import "vars";
+@import "mixin_all";
+@import "common";
+
+//メイン写真の切り替え
+@keyframes img_switch_off{
+    0%{
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes img_switch_on{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+//キャッチコピー
+@keyframes catch_ani{
+    0%{
+        opacity: 0 ;
+        transform: translate(0rem,0rem);
+    }
+    100%{
+        opacity: 1 ;
+        transform: translate(1.5rem,1.5rem);
+    }
+}
+
+//ステープが重ねている時
+@keyframes item_hover_in{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.95);
+    }
+}
+
+@keyframes item_hover_out{
+    0%{
+        transform: scale(0.95);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.item_hover_in{
+    animation:item_hover_in 0.6s ease-in-out forwards;
+}
+
+.item_hover_out{
+    animation:item_hover_out 0.6s ease-in-out forwards;
+}
+
+//チャットアニメ
+@keyframes chartAniOpen{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes chartAniClose{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+//ヘッダー部分
+.funHead{
+    display: flex ;
+    width: 100% ;
+    height: 7rem;
+    background: #fff;
+    position: relative;
+    z-index: 6;
+    &__funLogo{
+        width: 15% ;
+        padding: 2rem 0 2rem 1.5rem;
+        img{
+           height: 100% ;
+        }
+    }//.funLogo
+    &__funContorl{
+        display: flex ;
+        width : 35% ;
+        margin-left: 50%;
+        justify-content: space-between;
+        &__search{
+            width : 55% ;
+            height: 100% ;
+            padding : 1.8rem 0;
+            form{
+                display: flex;
+                margin-right: 2rem ;
+                border: 1px solid #C1C1C1 ;
+                border-radius: 1.5rem/50% ;
+                height: 3rem;
+                .searchData{
+                    width : 70% ;
+                    padding-left: 1.5rem ;
+                }//.searchData
+                .searchBtn{
+                    width : 15% ;
+                    img{
+                        width : 1.5rem ;
+                    }
+                }//.searchBtn
+            }//form
+        }//.search
+        &__userCon{
+            display: flex;
+            color: #fff;
+            list-style-type: none ;
+            .userConBtn{
+                width : 10rem ;
+                text-align: center ;
+                cursor: pointer;
+                img{
+                    height: 3rem ;
+                    margin : 1.5rem 0 0.5rem;
+                }
+                span{
+                    display: block;
+                }
+                &:nth-of-type(1){
+                    background: #FFC15F ;
+                }
+                &:nth-of-type(2){
+                    background: #48E28F ;
+                }
+            }//.uerConBtn
+        }//.userCon
+    }//.funContorl
+}//.funHead
+
+//メインスライド
+.funMain{
+    font-weight: 100 ;
+    &__slider{
+        position: relative;
+        width : 100% ;
+        height : 50rem ;
+        .bgContent{
+            .prev,.next{
+                position: absolute;
+                z-index:5000;
+                font-size: 4rem;
+                color: #fff;
+                transform: scale(1,2.5);
+                cursor: pointer;
+            }
+            .prev{
+                top : 45% ;
+                left: 5rem ;
+            }
+            .next{
+                top: 45% ;
+                right: 5rem ;
+            }
+            img{
+                display: block ;
+                width : 100% ;
+                height: 50rem ;
+                position: absolute;
+                top :0 ;
+                left :0 ;
+                &:nth-child(1){
+                    z-index: 20;
+                }
+                &:nth-child(2){
+                    z-index: 10;
+                }
+            }//img
+        }//.bgContent img
+        &__catch,&__line{
+            position: absolute;
+            width : 38rem ;
+            height: 10rem ;
+            color : #4E4E4E ;
+            font-size: 2.4rem ;
+            line-height: 3.8rem ;
+            padding : 1rem 1.5rem;
+        }
+        &__catch{
+            animation:catch_ani 0.8s ease-in-out 1s forwards;
+            top : 30rem ;
+            left : 15rem ;
+            z-index: 2000 ;
+            opacity: 0 ;
+            background:#fff ;
+        }//.catch
+        &__line{
+            top : 30rem ;
+            left : 15rem ;
+            z-index: 1000 ;
+            background: rgba(255,255,255,0);
+            border: 6px solid #F24F6E ;
+        }//.line
+    }//.slider
+
+    //イベントボタン
+    &__event{
+        display: flex ;
+        width : 80% ;
+        margin : 3rem 10% 0;
+        list-style-type: none ;
+        .eventBtn{
+            width : 32% ;
+            height: 8rem;
+            border-radius: 2.5rem ;
+            text-align: center ;
+            font-size: 1.8rem;
+            color: #fff;
+            line-height: 8rem ;
+            cursor: pointer;
+            &:nth-child(1){
+                background: #FF8E8E ;
+                margin-right: 2% ;
+            }
+            &:nth-child(2){
+                background: #78E5B7 ;
+                margin-right: 2% ;
+            }
+            &:nth-child(3){
+                background: #7BAAEA ;
+            }
+        }//.eventBtn
+    }//.event
+
+    //利用方法
+    &__howtouse{
+        width : 94% ;
+        margin : 3rem 3% 5rem ;
+        padding : 2rem 7% 4rem;
+        color: #707070;
+        background: #FFF7E3 ;
+        border-radius: 3rem ;
+        &__ttl{
+            margin : 3rem 0 ;
+            text-align: center ;
+            font-size: 4.5rem;
+            color: #FFAC4B ;
+            font-weight: normal ;
+            text-shadow: 3px 3px 0px #fff;
+        }//.ttl
+        &__desc{
+            width : 45rem ;
+            margin : 0 auto 1rem;
+            font-size: 2rem;
+        }//.desc
+        &__stepArea{
+            display: flex ;
+            margin: 6rem 0 4rem;
+            list-style-type: none ;
+            cursor: pointer;
+            &__useStep{
+                text-align: center ;
+                background: #fff ;
+                width : 32% ;
+                border-radius: 3rem ;
+                .stepNum{
+                    margin : 0 auto ;
+                    width : 4.8rem ;
+                    height: 4.8rem ;
+                    color : #fff;
+                    border-radius: 50% ;
+                    font-size: 2.4rem;
+                    line-height: 4.8rem ;
+                    transform: translateY(-1.9rem);
+                }
+                &:nth-child(1) .stepNum{
+                    background: #FFA5BA ;
+                    box-shadow: 0 3px 3px 4px rgba(255,165,186,0.3) ;
+                }
+                &:nth-child(2) .stepNum{
+                    background: #78E5B7 ;
+                    box-shadow: 0 3px 3px 4px rgba(120,229,183,0.3) ;
+                }
+                &:nth-child(3) .stepNum{
+                    background: #789AE5 ;
+                    box-shadow: 0 3px 3px 4px rgba(120,154,229,0.3);
+                }
+                img{
+                    height : 30% ;
+                    margin : 0.5rem 0 2.5rem;
+                }
+                .stepName{
+                    font-size: 3.5rem;
+                    font-weight: normal ;
+                }
+                .stepDesc{
+                    margin: 1.5rem 0 0;
+                    padding : 0 3.5rem ;
+                    font-size: 1.6rem;
+                }
+                &:nth-child(1),&:nth-child(2){
+                    margin-right: 2% ;
+                }
+            }//.useStep
+        }//.stepArea
+        &__buyBtn{
+            display: block ;
+            width : 40rem ;
+            padding: 0.6rem 0 ;
+            margin : 0 auto ;
+            background: #FFC15F ;
+            border-radius :4.5rem/100% ;
+            box-shadow: 0 3px 3px 4px rgba(255,193,95,0.3);
+            color: #fff ;
+            font-size: 2.2rem;
+            img{
+                width : 13% ;
+                margin : 1.2rem 1.5rem ;
+                vertical-align: middle ;
+            }
+            transition: 0.6s ease-in-out;
+            &:hover{
+                transform: translateY(-5px);
+                background: #FFD086;
+            }
+        }//.buyBtn
+    }//.howtousee
+
+    //体験一覧
+    &__category{
+        width : 94% ;
+        margin : 5rem 3% 5rem ;
+        padding : 2rem 7% ;
+        color: #707070;
+        background: #EAFF93 ;
+        border-radius: 3rem ;
+        &__ttl{
+            margin : 3rem 0 ;
+            text-align: center ;
+            font-size: 4.5rem;
+            color: #ADCE29 ;
+            font-weight: normal ;
+            text-shadow: 3px 3px 0px #fff;
+        }//.ttl
+        
+        //紹介リストエリア
+        &__categoryArea{
+            display: flex ;
+            flex-wrap: wrap ;
+            margin: 6rem 0 2rem;
+            list-style-type: none ;
+            &__experience{
+                margin-bottom: 2rem ;
+                width : 32% ;
+                border-radius: 2rem ;
+                background: #fff ;
+                &:not(:nth-child(3n)){
+                    margin-right: 2%;
+                }
+                .categoryPhoto{
+                    width: 100%;
+                    border-radius: 2rem 2rem 0 0;
+                    cursor: pointer;
+                    transition: 0.6s ease-in-out;
+                    &:hover{
+                        filter: opacity(0.6);
+                    }
+                }//.categoryPhoto
+                .categoryTtl,.categoryDesc,.categoryDate,.categorySpace{
+                    padding: 0 1.5rem;
+                }
+                .categoryTtl{
+                    margin: 1.5rem 0 0;
+                    font-size: 2.4rem;
+                    font-weight: 100;
+                    cursor: pointer;
+                }
+                .categoryDesc{
+                    font-size: 1.5rem;
+                    text-align: justify;
+                    line-height: 2.5rem ;
+                    margin:1rem 0 3rem;
+                    span{
+                        color: #399FEA;
+                        b{
+                            font-weight: 100 ;
+                            font-size: 2rem;
+                            margin-right: 0.3rem;
+                        }
+                    }
+                }//.categoryDesc
+                .categoryDate,.categorySpace{
+                    margin-bottom: 1rem ;
+                    font-size: 1.3rem;
+                    img{
+                        vertical-align: middle;
+                        margin-right: 0.8rem;
+                    }
+                }
+                .categoryDate{
+                    margin-top: 1rem;
+                    img{
+                        width: 1.8rem;
+                    }
+                    time{
+                        margin-right: 0.8rem ;
+                    }
+                    .type{
+                        display: inline-block;
+                        width: 6.5rem ;
+                        height: 2.4rem ;
+                        margin: 0 0.3rem;
+                        font-size: 1rem;
+                        line-height: 2.4rem;
+                        text-align: center;
+                        background: #7BEA9D;
+                        color :#fff ;
+                        border-radius: 1rem/50%;
+                    }
+                }//.categoryDate
+                .categorySpace{
+                    a{
+                        color: #399FEA;
+                        text-decoration: none;
+                    }//a
+                }//categorySpace
+            }//.experience
+        }//.categoryArea
+        &__moreBtn{
+            display: block ;
+            width : 40rem ;
+            padding: 1.6rem 0 ;
+            margin : 0 auto 2rem;
+            background: #FFC15F ;
+            border-radius :4.5rem/100% ;
+            box-shadow: 0 3px 3px 4px rgba(255,193,95,0.3);
+            color: #fff ;
+            font-size: 2.2rem;
+            transition: 0.6s ease-in-out;
+            &:hover{
+                transform: translateY(-5px);
+                background: #FFD086;
+            }
+        }//.moreBtn
+    }//.category
+
+    //よくある質問
+    &__question{
+        width : 94% ;
+        margin : 3rem 3% 5rem ;
+        padding : 2rem 7% 4rem;
+        color: #707070;
+        background: #E8FF86 ;
+        border-radius: 3rem ;
+        &__ttl{
+            margin : 3rem 0 ;
+            text-align: center ;
+            font-size: 4.5rem;
+            color: #ADCE29 ;
+            font-weight: normal ;
+            text-shadow: 3px 3px 0px #fff;
+            img{
+                width: 8rem ;
+                margin-left: 0.8rem ;
+                margin-bottom: 1rem;
+                vertical-align: middle ;
+            }
+        }//.ttl
+        &__questionArea{
+            width : 100% ;
+            margin-bottom: 2rem ;
+            padding: 1.5rem 2rem;
+            border-radius: 2rem ;
+            background: #fff ;
+            .questionAsk{
+                margin:0.8rem 0 ;
+                color : #ADCE29 ;
+                font-size: 1.6rem;
+            }
+            .questionAnswer{
+                margin:0.8rem 0 ;
+                font-size: 1.6rem;
+                line-height: 2.6rem;
+            }
+        }//.questionArea
+        &__moreBtn{
+            display: block ;
+            width : 40rem ;
+            padding: 1.6rem 0 ;
+            margin : 4rem auto 0;
+            background: #B0D032 ;
+            border-radius :4.5rem/100% ;
+            box-shadow: 0 3px 3px 4px rgba(176,268,50,0.3);
+            color: #fff ;
+            font-size: 2.2rem;
+            transition: 0.6s ease-in-out;
+            &:hover{
+                transform: translateY(-5px);
+                background: #C0E337;
+            }
+        }//.moreBtn
+    }//.question
+
+    //カテゴリー検索
+    &__categorySearch{
+        width : 94% ;
+        margin : 5rem 3% 5rem ;
+        padding : 2rem 7% 4rem;
+        color: #707070;
+        background: #F8F7D7 ;
+        border-radius: 3rem ;
+        &__ttl{
+            margin : 3rem 0 ;
+            text-align: center ;
+            font-size: 4.5rem;
+            color: #FFC15F ;
+            font-weight: normal ;
+            text-shadow: 3px 3px 0px #fff;
+            img{
+                width: 8rem ;
+                margin-left: 0.8rem ;
+                margin-bottom: 1rem;
+                vertical-align: middle ;
+            }
+        }//.ttl
+        &__search{
+            width : 66rem ;
+            margin: 0 auto ;
+            padding : 1.8rem 0;
+            form{
+                display: flex;
+                width: 100% ;
+                .searchDate{
+                    margin-right: 1rem ;
+                    width: 13rem ;
+                    height : 5rem;
+                    background:  #fff ;
+                    color: #bbbbbb ;
+                    font-size: 1.8rem;
+                    line-height: 5rem;
+                    text-align: center ;
+                    border-radius: 1.5rem;
+                }
+                .searchSpace,.searchAge,.searchKeyword{
+                    padding:0 1.5rem ;
+                    height : 5rem;
+                    margin-right: 1rem ;
+                    width: 12rem ;
+                    background:  #fff ;
+                    color: #707070 ;
+                    font-size: 1.8rem;
+                    border-radius: 1.5rem;
+                    &::placeholder{
+                        font-size: 1.8rem;
+                        text-align: center;
+                    }
+                }//.searchData
+                .searchKeyword{
+                    width : 20rem ;
+                }
+                .searchDateInput{
+                    display: none ;
+                }
+                .searchBtn{
+                    background: #FFC15F ;
+                    border-radius: 50% ;
+                    img{
+                        width : 2.6rem ;
+                        margin: 1rem 1.2rem;
+                    }
+                }//.searchBtn
+            }//form
+        }//.search
+        &__searchArea{
+            .control{
+                display: flex ;
+                .categoryTtl,.mapTtl{
+                    position: relative;
+                    width : 30rem ;
+                    height: 4.6rem ;
+                    font-size: 1.8rem ;
+                    line-height: 4.6rem ;
+                    font-weight: 100 ;
+                    text-align: center ;
+                    border-radius: 1.5rem 1.5rem 0 0 ;
+                    cursor: pointer;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        right : -2.5rem ;
+                        top : 0.6rem ;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 4.0rem 0 0 2.8rem;
+                    }
+                }//.categoryTtl
+                .categoryTtl{
+                    z-index: 200;
+                    background: #FFC15F ;
+                    color : #fff ;
+                    &::after{
+                        border-color: transparent transparent transparent #FFC15F;
+                    }
+                }
+                .mapTtl{
+                    z-index: 100;
+                    background: #8FD058 ;
+                    color : #fff ;
+                    &::after{
+                        border-color: transparent transparent transparent #8FD058;
+                    }
+                }
+            }//.control
+            &__map{
+                display: none ;
+                padding : 4.5rem 3% 3rem;
+                background: #fff ;
+                border-radius: 0 0 2rem 2rem ;
+                iframe{
+                    width:100% ;
+                    height: 35rem;
+                }
+            }//.map
+            &__category{
+                padding : 4.5rem 3% 3rem;
+                background: #fff ;
+                border-radius: 0 0 2rem 2rem ;
+                &__list{
+                    display: flex ;
+                    flex-wrap: wrap ;
+                    .categoryArea{
+                        width : 22% ;
+                        cursor: pointer ;
+                        &:not(:nth-child(4n)){
+                            margin-right: 4%;
+                        }
+                        .photo{
+                            width: 100%;
+                            border-radius: 1.5rem ;
+                            border: 3px solid rgba(0,0,0,0);
+                            transform: scale(1);
+                            transform-origin: center center ;
+                            transition: 0.4s ease-in-out ;
+                            &:hover{
+                                transform: scale(1.05);
+                                filter: opacity(0.6);
+                            }
+                        }//.photo
+                        .name{
+                            width: 60% ;
+                            height: 3.6rem;
+                            margin: 0 20% ;
+                            text-align: center ;
+                            font-size: 1.8rem;
+                            color: #fff;
+                            line-height: 3.6rem ;
+                            font-weight: 100;
+                            border-radius: 1.5rem/50%;
+                            transform: translateY(-2.2rem);
+                            box-shadow: 0 2px 2px 3px rgba(100,100,100,0.1);
+                        }//.name
+                    }//.categoryArea
+                }//.list
+            }//.category
+        }//.categoryArea
+    }//.categorySearch
+
+    //ご利用者レビュー
+    &__userView{
+        width : 94% ;
+        margin : 3rem 3% 5rem ;
+        padding : 2rem 7% 4rem;
+        color: #707070;
+        background: #FFF3CC ;
+        border-radius: 3rem ;
+        &__ttl{
+            margin : 3rem 0 ;
+            text-align: center ;
+            font-size: 4.5rem;
+            color: #F7A434 ;
+            font-weight: normal ;
+            text-shadow: 3px 3px 0px #fff;
+            img{
+                width: 6rem ;
+                margin-left: 0.8rem ;
+                margin-bottom: 1rem;
+                vertical-align: middle ;
+            }
+        }//.ttl
+        &__userArea{
+            display: flex;
+            flex-wrap: wrap ;
+            width: 100%;
+            &__user{
+                width : 45%;
+                padding: 1.5rem 5rem;
+                background: #fff ;
+                border: 2px solid #F7A434 ;
+                border-radius: 1.5rem ;
+                text-align: center ;
+                &:nth-child(2n){
+                    margin-left: 10% ;
+                }
+                &:nth-child(1),&:nth-child(2){
+                    margin-bottom: 4rem ;
+                }
+                .userName{
+                    margin: 1rem 0;
+                    color :#F7A434;
+                    font-size: 1.6rem;
+                }//.userName
+                .userMess{
+                    font-size: 1.8rem;
+                    line-height: 2.8rem;
+                    text-align: justify;
+                }//.userMess
+            }//.user
+        }//.userArea
+    }//.ticket
+
+    //チケットシステム
+    &__ticket{
+        width : 94% ;
+        margin : 3rem 3% 5rem ;
+        padding : 2rem 7% 4rem;
+        color: #707070;
+        background: #E8FF86 ;
+        border-radius: 3rem ;
+        &__ttl{
+            margin : 3rem 0 ;
+            text-align: center ;
+            font-size: 4.5rem;
+            color: #ADCE29 ;
+            font-weight: normal ;
+            text-shadow: 3px 3px 0px #fff;
+            img{
+                width: 8rem ;
+                margin-left: 0.8rem ;
+                margin-bottom: 1rem;
+                vertical-align: middle ;
+            }
+        }//.ttl
+        &__ticketArea{
+            display: flex;
+            &__ticketType{
+                width: 85% ;
+                padding : 2rem 3rem ;
+                margin-bottom : 2rem ;
+                color: #fff ;
+                border-radius: 2rem ;
+                .type{
+                    font-size: 3rem;
+                    font-weight: 100;
+                    text-align: center ;
+                    margin-bottom: 1.5rem ;
+                }
+                .desc{
+                    font-size: 2rem;
+                    margin: 0.6rem 0;
+                }
+                .sType{
+                    list-style-type: none;
+                    margin: 3.6rem 0 ;
+                    li{
+                        img{
+                            width : 4.5rem;
+                            vertical-align: middle;
+                            margin-right: 5rem;
+                        }
+                        span{
+                            font-size: 1.6rem;
+                        }
+                        font-size: 2.6rem;
+                        margin:3rem 0;
+                    }
+                }//.sType
+                &:nth-child(1){
+                    margin-right: 10% ;
+                    background: #F8B6C2 ;
+                }
+                &:nth-child(2){
+                    background: #C1CEF8 ;
+                }
+                .comment{
+                    font-size: 1.4rem;
+                    margin: 0.8rem 0;
+                }
+            }//.ticketType
+        }//.questionArea
+        &__buyBtn{
+            display: block ;
+            width : 40rem ;
+            padding: 0.6rem 0 ;
+            margin : 0 auto ;
+            background: #FFC15F ;
+            border-radius :4.5rem/100% ;
+            box-shadow: 0 3px 3px 4px rgba(255,193,95,0.3);
+            color: #fff ;
+            font-size: 2.2rem;
+            img{
+                width : 13% ;
+                margin : 1.2rem 1.5rem ;
+                vertical-align: middle ;
+            }
+            transition: 0.6s ease-in-out;
+            &:hover{
+                transform: translateY(-5px);
+                background: #FFD086;
+            }
+        }//.moreBtn
+    }//.question
+
+    .chart{
+        position: fixed;
+        z-index: 6000 ;
+        right : 3% ;
+        bottom: 0 ;
+        width : 24rem ;
+        height: 4rem ;
+        background: #65B2FF ;
+        border-radius: 1rem 1rem 0 0 ;
+        text-align: center ;
+        cursor: pointer;
+        &__chartTtl{
+            margin:0.8rem 0 ;
+            color: #fff ;
+            font-size: 1.6rem;
+            font-weight: 100 ;
+            img{
+                vertical-align: middle ;
+                width : 2rem ;
+                margin-right: 0.8rem ;
+            }
+        }//.chartTtl
+    }//.chart
+
+    .chartWindow{
+        transform: translateY(100%);
+        position: fixed;
+        z-index: 6000 ;
+        right : 3% ;
+        bottom: 0 ;
+        width : 24rem ;
+        height: 40rem ;
+        background: #65B2FF ;
+        border-radius: 1rem 1rem 0 0 ;
+        &__chartPrev{
+            width: 100% ;
+            text-align: left ;
+            padding:0 1rem ;
+            cursor: pointer;
+            margin:0.8rem 0 ;
+            color: #fff ;
+            font-size: 1.6rem;
+            font-weight: 100 ;
+            img{
+                vertical-align: middle ;
+                width : 2rem ;
+                margin-right: 0.8rem ;
+            }
+        }//.chartTtl
+        &__chartArea{
+            height: 32rem ;
+            overflow-y: scroll ;
+            padding: 1rem ;
+            background: #fff ;
+            p{
+                display: flex ;
+                margin: 1rem 0 ;
+                img{
+                    width : 3.8rem ;
+                    height: 3.8rem;
+                    vertical-align: middle ;
+                    margin: 0 1rem ;
+                }
+                span{
+                    font-size: 1.2rem;
+                    width : 80% ;
+                    background: #dedede ;
+                    padding : 0.6rem ;
+                    border-radius: 0.8rem ;
+                }
+                .mymess{
+                    background: #399FEA;
+                    color:#fff;
+                }
+            }//p
+        }//.chartArea
+        &__chartWrite{
+            .userWriteData{
+                margin : 0.6rem 5% ;
+                padding : 0 0.8rem ;
+                width : 90% ;
+                height: 3.2rem ;
+                background: #fff ;
+                font-size: 1.2rem;
+                border-radius: 1.2rem/50% ;
+            }
+        }
+    }//.chartWindow
+
+}//.funMain
+.footer{
+    width: 100%;
+    height: auto;
+    background: #ffb43c;
+    font-size: 18px;
+    padding: 60px 0 20px;
+    &__nav{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        color: #fff;
+        li{
+            cursor: pointer;
+        }
+    }
+    small{
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 67px;
+        
+    }
+}
+
+// @media screen and (min-width:1280px) {
+
+// }
+    
